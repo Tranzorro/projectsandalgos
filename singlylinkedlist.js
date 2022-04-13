@@ -40,6 +40,14 @@ class SLL{
         return this.head;
     }
 
+    display(){
+        let head = this.head.data; // get the actual head to start.
+        while(head != null){ // while i have a head, do a thing.
+            console.log(`this node's data is `, head);
+            head = head.next;
+        }
+    }
+
 }
 
 let firstNode = new Node(100);
@@ -51,5 +59,6 @@ mySLL.addFront(firstNode);
 firstNode.next = secondNode;
 secondNode.next = thirdNode;
 
-console.log(mySLL.head.data);
-console.log(mySLL.head.data.next.next); // ONLY CALL NEXT AFTER DATA
+// console.log(mySLL.head.data);
+// console.log(mySLL.head.data.next.next); // ONLY CALL NEXT AFTER DATA
+mySLL.display();
